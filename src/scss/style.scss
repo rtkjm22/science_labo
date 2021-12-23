@@ -1,0 +1,32 @@
+// すべてのページで読み込む
+
+// リセットcss + ベース
+@use './base/reset';
+@use './base/base';
+
+// 設定ファイル
+@use './setting/variables';
+@use './setting/extends';
+@use './setting/function';
+@use './setting/animation';
+@use './setting/helper';
+
+// mixin
+@use './mixin/mixin';
+
+// モジュールファイル
+@use './module/header';
+@use './module/gnav';
+@use './module/service';
+@use './module/news';
+@use './module/gallery';
+@use './module/contact';
+@use './module/footer';
+
+// モジュールパーツ
+@use './module/parts/splash';
+@use './module/parts/topBtn';
+// etc...
+
+// @use "./pulgins/";
+

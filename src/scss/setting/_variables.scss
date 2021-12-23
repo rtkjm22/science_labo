@@ -1,0 +1,31 @@
+//変数
+
+//ブレイクポイント
+$breakpoints: (
+  'xxs': 'screen and (max-width: 3600px)',
+  'xs': 'screen and (max-width: 550px)',
+  'sm': 'screen and (max-width: 768px)',
+  'md': 'screen and (max-width: 870px)',
+  'lg': 'screen and (max-width: 960px)',
+  'xl': 'screen and (max-width: 1020px)',
+) !default;
+
+// 画像ディレクトリ
+$imgDir: '../../src/img/';
+
+// サイトカラー
+$first:  #31B7B8;
+$second: #059ac5;
+$third:  #0576c5;
+$fourth: #0556c5;
+
+$first08: #31b7b8cc;
+
+$white: #f0f0f0;
+$black: #333333;
+
+
+// トランジション fast > normal > lazy
+$transition_f: .25s;
+$transition_n: .50s;
+$transition_l: 1s;
