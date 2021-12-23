@@ -9,6 +9,8 @@ body {
   font-size: 1rem;
   line-height: 1.85;
   word-break: break-word;
+  background: v.$white;
+  color: v.$black;
 }
 
 ul {
@@ -48,9 +50,4 @@ img {
 
 body.appear .ly_cont {
   opacity: 0;
-}
-
-// 削除
-.hoge {
-  color: blue;
 }
