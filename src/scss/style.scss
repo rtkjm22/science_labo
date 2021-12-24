@@ -17,15 +17,19 @@
 // モジュールファイル
 @use './module/header';
 @use './module/gnav';
-@use './module/service';
-@use './module/news';
-@use './module/gallery';
+@use './module/greet';
+@use './module/topics';
+@use './module/fluidArea';
 @use './module/contact';
 @use './module/footer';
 
 // モジュールパーツ
 @use './module/parts/splash';
+@use './module/parts/btn';
+@use './module/parts/openBtn';
 @use './module/parts/topBtn';
+@use './module/parts/fluid';
+@use './module/parts/heading';
 // etc...
 
 @use "./pulgins/animate";

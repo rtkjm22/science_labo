@@ -2,3 +2,7 @@
 @forward "./extends";
 @use "./variables" as v;
 @use "../mixin/mixin" as m;
+
+.hp_txt__r {
+  text-align: right;
+}

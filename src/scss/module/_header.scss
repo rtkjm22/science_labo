@@ -1,3 +1,60 @@
 @forward "../setting/animation";
 @use "../setting/variables"as v;
 @use "../mixin/mixin"as m;
+
+.bl_header {
+  padding: 30px 70px 40px 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  &_ttl > a {
+    font-size: 1.7rem;
+    letter-spacing: .05em;
+    font-weight: normal;
+  }
+  &_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      font-weight: bold;
+      letter-spacing: .1em;
+      margin-right: 20px;
+    }
+    li, dl, dt, dd {
+      display: inline-block;
+    }
+    &_tel::after {
+      content: '/';
+      padding: 0 10px;
+    }
+  }
+}
+
+@include m.mq(lg) {
+  .bl_header {
+    padding: 5px 30px 0 90px;
+  }
+}
+
+@include m.mq(md) {
+  .bl_header {
+    padding: 5px 30px;
+    justify-content: center;
+    ul {
+      display: none;
+    }
+    .bl_btn {
+      display: none;
+    }
+  }
+}
+
+@include m.mq(sm) {
+  .bl_header {
+    &_ttl a {
+      font-size: 1.4rem;
+    }
+  }
+}

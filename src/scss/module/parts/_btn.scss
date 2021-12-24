@@ -1,0 +1,22 @@
+@forward '../../setting/animation';
+@use '../../setting/variables' as v;
+@use '../../mixin/mixin' as m;
+
+.bl_btn {
+  position: relative;
+  top: 0;
+  padding: 8px 40px;
+  display: inline-block;
+  border: 1px solid v.$black;
+  text-decoration: none;
+  outline: none;
+  transition: v.$transition_f;
+  color: v.$black;
+  &__round {
+    border-radius: 30px;
+    &:hover {
+      top: -3px;
+      box-shadow: 0 2px 3px v.$black03;
+    }
+  }
+}

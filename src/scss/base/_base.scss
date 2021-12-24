@@ -7,6 +7,7 @@
 body {
   text-size-adjust: 100%;
   font-size: 1rem;
+  font-family: v.$f_noto;
   line-height: 1.85;
   word-break: break-word;
   background: v.$white;
@@ -20,6 +21,7 @@ ul {
 }
 
 a {
+  color: v.$first;
   text-decoration: none;
   outline: none;
 }
@@ -33,7 +35,13 @@ img {
 
 
 /*	フォント関連	*/
-
+.bl_header,
+h1,
+h2, 
+.heading01,
+.count_size {
+  font-family: v.$f_roboto;
+}
 
 
 /*	heading	*/
@@ -41,11 +49,20 @@ img {
 
 
 /*	レイアウト関連	*/
-.ly_cont {
-  overflow-x: hidden;
-  z-index: 1;
+.ly_wrapper {
   position: relative;
-  opacity: 0;
+  z-index: 1;
+}
+
+.ly_cont {
+  padding-right: 70px;
+  padding-left: 130px;
+}
+
+@include m.mq(lg) {
+  .ly_cont {
+    padding: 0 30px;
+  }
 }
 
 body.appear .ly_cont {

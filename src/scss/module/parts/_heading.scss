@@ -1,0 +1,91 @@
+@forward '../../setting/animation';
+@use '../../setting/variables' as v;
+@use '../../mixin/mixin' as m;
+
+.bl_heading_block {
+  padding-left: 70px;
+}
+
+.bl_heading {
+  position: relative;
+  font-weight: normal;
+  font-size: 5vw;
+  letter-spacing: .1em;
+  padding-bottom: 30px;
+  line-height: 1;
+  &::first-letter {
+    font-size: 12vw;
+  }
+  span {
+    position: absolute;
+  }
+  &_en {
+    top: 1.5em;
+    left: 2em;
+    font-size: 3vw;
+  }
+  &_ja {
+    top: 7em;
+    left: 5.5em;
+    font-family: v.$f_noto;
+    font-size: 1.2vw;
+  }
+}
+
+.bl_greet {
+  .bl_heading {
+    &_en {
+      left: 3em;
+    }
+    &_ja {
+      left: 8em;
+    }
+  }
+}
+
+.bl_statistics {
+  .bl_heading {
+    &_en {
+      left: 2.5em;
+    }
+    &_ja {
+      left: 7em;
+    }
+  }
+}
+
+@include m.mq(lg) {
+  .bl_heading {
+    font-size: 1rem;
+    &::first-letter {
+      font-size: 8rem;
+    }
+    &_en {
+      font-size: 2rem;
+    }
+    &_ja {
+      font-size: 1rem;
+      top: 6em;
+    }
+  }
+}
+@include m.mq(sm) {
+  .bl_heading {
+    &::first-letter {
+      font-size: 6rem;
+    }
+    &_en {
+      font-size: 1.6rem;
+    }
+    &_ja {
+      font-size: .9rem;
+      top: 5em;
+      left: 4em;
+    }
+  }
+}
+@include m.mq(xs) {
+  .bl_heading_block {
+    padding: 0;
+  }
+}
