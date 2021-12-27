@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="content-type" content="text/html">
-  <title>Template</title>
+  <title>科学的なサイト</title>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP%7CRoboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./src/css/style.css">
 </head>
@@ -16,11 +16,11 @@
     <div class="bl_splash_txt"></div>
   </div><!-- / .bl_splash -->
 
-  <div class="bl_particles_js"></div><!-- / .bl_particles_js -->
+  <div id="js_particlesJS"></div><!-- / .bl_particles_js -->
 
   <div class="ly_wrapper">
 
-    <header class="bl_header">
+    <header class="bl_header js_fadeDownTrigger">
       <h1 class="bl_header_ttl js_smoothTrigger"><a href="#">SCIENCE LAB</a></h1>
       <div class="bl_header_area">
         <ul>
@@ -147,57 +147,48 @@
           </div>
         </section><!-- / .bl_greet -->
 
-
-
-
-
-
-        <p class="num" hoge="fugafuga"></p>
-        <div class="app">
-          <div class="progressBar">
-
-          </div><!-- / .progressBar -->
-        </div>
-
-        <form>
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-        </form>
-
-
-
-
-
-
-
         <section class="bl_statistics">
+
+          <div class="bl_heading_block">
+            <h2 class="bl_heading">S<span class="bl_heading_en">tastistics</span><span class="bl_heading_ja">統計データ</span></h2>
+          </div>
+
+          <div class="bl_countUp js_smoothTrigger">
+            <div class="bl_countUp_block">
+              <p>年間の実験回数 約<span class="js_countUp bl_countUp_size">395</span>回</p>
+              <p>サイエンスラボでは日々様々な実験が行われています。</p>
+            </div>
+          </div>
+
+          <div class="bl_chartArea bl_chartArea__pie js_smoothTrigger">
+            <canvas class="js_chart__pie"></canvas>
+          </div>
+
+          <div class="bl_chartArea bl_chartArea__bar js_smoothTrigger">
+            <canvas class="js_chart__bar"></canvas>
+          </div>
 
         </section><!-- / .bl_statistics -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section class="bl_contact"></section><!-- / .bl_contact -->
-
+        <section class="bl_contact">
+          <h2 class="bl_contact_ttl js_smoothTrigger">Contact<span>お問い合わせ</span></h2>
+          <p class="js_smoothTrigger">10:00-19:00（平日）</p>
+          <ul class="bl_contact_info js_smoothTrigger">
+            <li>
+              <dl>
+                <dt>Tel</dt>
+                <dd><a href="#">03-1234-5678</a></dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Fax</dt>
+                <dd>03-1234-5678</dd>
+              </dl>
+            </li>
+          </ul>
+          <a href="#" class="bl_btn bl_btn__LR"><span>お問い合わせフォームへ</span></a>
+        </section><!-- / .bl_contact -->
       </main>
 
 
@@ -209,7 +200,7 @@
         <small>&copy; Science Lab</small>
       </footer>
 
-      <canvas class="waveCanvas"></canvas>
+      <!-- <canvas class="bl_waveCanvas"></canvas> -->
 
     </div><!-- / .ly_cont -->
 
@@ -217,8 +208,18 @@
 
 
   <script type="text/javascript" src="./src/js/lib/jquery.js"></script>
+  <!-- progressbar.js -->
+  <script type="text/javascript" src="./src/js/lib/progressbar.js"></script>
+  <!-- chart.js -->
+  <script type="text/javascript" src="./src/js/lib/chartJS.js"></script>
+  <!-- jquery.inview -->
+  <script type="text/javascript" src="./src/js/lib/inview.js"></script>
   <!-- particle.js -->
   <script type="text/javascript" src="./src/js/lib/particles.min.js"></script>
+  <!-- textillate.js -->
+  <script type="text/javascript" src="./src/js/lib/textillate.js"></script>
+  <script type="text/javascript" src="./src/js/lib/lettering.js"></script>
+
   <script type="text/javascript" src="./src/js/main.js"> </script>
 </body>
 

@@ -1,0 +1,15 @@
+@forward '../../setting/animation';
+@use '../../setting/variables' as v;
+@use '../../mixin/mixin' as m;
+
+.bl_pageTop {
+  margin: 0 auto 100px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 2px;
+  border-color: v.$gray v.$gray transparent transparent;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}

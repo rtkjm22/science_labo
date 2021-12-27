@@ -1,3 +1,74 @@
 @forward "../setting/animation";
 @use "../setting/variables"as v;
 @use "../mixin/mixin"as m;
+
+.bl_contact {
+  position: relative;
+  margin-bottom: 100px;
+  padding-top: 130px;
+  text-align: center;
+  &::before {
+    content: '';
+    width: 1px;
+    height: 100px;
+    background-color: v.$black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
+  &_ttl {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    span {
+      font-size: 1rem;
+      display: block;
+    }
+  }
+  &_info {
+    margin: 20px 0 50px;
+    letter-spacing: .1em;
+    li, dl, dt, dd {
+      display: inline-block;
+    }
+    dt {
+      padding-right: 10px;
+    }
+    dd, a {
+      font-size: 1.5rem;
+      color: v.$black;
+    }
+    li:first-child::after {
+      content: '/';
+      padding: 0 10px;
+    }
+  }
+}
+
+@include m.mq(lg) {
+  .bl_contact_ttl {
+    font-size: 2rem;
+  }
+}
+@include m.mq(sm) {
+  .bl_contact {
+    &_ttl {
+      font-size: 1.5rem;
+    }
+    dd, a {
+      font-size: 1rem;
+    }
+  }
+}
+@include m.mq(xs) {
+  .bl_contact {
+    li {
+      display: block;
+      &:first-child::after {
+        content: '';
+        padding: 0;
+      }
+    }
+  }
+}

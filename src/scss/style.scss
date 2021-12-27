@@ -20,6 +20,7 @@
 @use './module/greet';
 @use './module/topics';
 @use './module/fluidArea';
+@use './module/statistics';
 @use './module/contact';
 @use './module/footer';
 
@@ -27,9 +28,13 @@
 @use './module/parts/splash';
 @use './module/parts/btn';
 @use './module/parts/openBtn';
-@use './module/parts/topBtn';
+@use './module/parts/pageTop';
 @use './module/parts/fluid';
 @use './module/parts/heading';
+@use './module/parts/chart';
+@use './module/parts/countUp';
+@use './module/parts/waveCanvas';
+@use './module/parts/particlesJS';
 // etc...
 
 @use "./pulgins/animate";

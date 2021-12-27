@@ -10,7 +10,7 @@
   width: 100%;
   height: 100vh;
   background: linear-gradient(to top right, v.$first, v.$second);
-  transition: all v.$transition_n;
+  transition: v.$transition_l ease-in-out;
   ul {
     position: absolute;
     z-index: 999;
@@ -22,19 +22,19 @@
     list-style: none;
     text-align: center;
     &:nth-of-type(1) {
-      animation-delay: .3s;
+      animation-delay: 1.0s;
     }
     &:nth-of-type(2) {
-      animation-delay: .5s;
+      animation-delay: 1.3s;
     }
     &:nth-of-type(3) {
-      animation-delay: .7s;
+      animation-delay: 1.6s;
     }
     &:nth-of-type(4) {
-      animation-delay: .9s;
+      animation-delay: 1.9s;
     }
     &:nth-of-type(5) {
-      animation-delay: 1.1s;
+      animation-delay: 2.2s;
     }
   }
   a {

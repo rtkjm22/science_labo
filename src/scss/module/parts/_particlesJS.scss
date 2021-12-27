@@ -1,0 +1,10 @@
+@forward '../../setting/animation';
+@use '../../setting/variables' as v;
+@use '../../mixin/mixin' as m;
+
+#js_particlesJS {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}

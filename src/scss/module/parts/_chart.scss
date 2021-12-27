@@ -1,0 +1,21 @@
+@forward '../../setting/animation';
+@use '../../setting/variables' as v;
+@use '../../mixin/mixin' as m;
+
+.bl_chartArea {
+  &__pie {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 50vh;
+    margin: 0 auto 100px;
+  }
+  &__bar {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    max-width: 600px;
+    margin: 0 auto 100px;
+  }
+}
+

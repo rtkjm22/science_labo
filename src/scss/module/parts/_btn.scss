@@ -8,8 +8,6 @@
   padding: 8px 40px;
   display: inline-block;
   border: 1px solid v.$black;
-  text-decoration: none;
-  outline: none;
   transition: v.$transition_f;
   color: v.$black;
   &__round {
@@ -18,5 +16,60 @@
       top: -3px;
       box-shadow: 0 2px 3px v.$black03;
     }
+  }
+  &__LR {
+    border: 1px solid #ccc;
+    padding: 10px 30px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: 0;
+      z-index: -1;
+      background-color: v.$black;
+      transition: v.$transition_f;
+    }
+    span {
+      display: block;
+      z-index: 2;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: v.$black;
+        transition: v.$transition_f;
+      }
+      &::before {
+        left: 0;
+        top: 0;
+      }
+      &::after {
+        left: 0;
+        bottom: 0;
+      }
+    }
+    &:hover {
+      color: white;
+      border-color: transparent;
+      transition-delay: .4s;
+      &::before {
+        width: 100%;
+        transition-delay: .4s;
+      }
+      span::before,
+      span::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include m.mq(xxs) {
+  .bl_btn__LR span {
+    font-size: .8rem;
   }
 }

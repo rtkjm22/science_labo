@@ -1,0 +1,31 @@
+@forward '../../setting/animation';
+@use '../../setting/variables' as v;
+@use '../../mixin/mixin' as m;
+
+.bl_countUp {
+  display: flex;
+  justify-content: flex-end;
+  margin: -100px 0 100px 0;
+}
+
+.bl_countUp_size {
+  font-size: 5vw;
+  color: v.$first;
+  padding: 0 10px;
+  line-height: 1.2;
+}
+
+@include m.mq(sm) {
+  .bl_countUp {
+    justify-content: center;
+    margin: 0 0 100px 0;
+  }
+}
+@include m.mq(xs) {
+  .bl_countUp {
+    justify-content: flex-start;
+    &_size {
+      font-size: 2rem;
+    }
+  }
+}

@@ -21,6 +21,9 @@
   transform-origin: left;
   opacity: 0;
 }
+.js_smoothTrigger {
+  opacity: 0;
+}
 @keyframes smoothAnime {
   from {
     transform: translate3d(0, 100%, 0) skewY(12deg);
@@ -31,6 +34,25 @@
     opacity: 1;
   }
 }
+
+.fadeDown {
+  animation: fadeDownAnime .5s forwards;
+  opacity: 0;
+}
+.js_fadeDownTrigger {
+  opacity: 0;
+}
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /*	ほわほわした背景・輪郭	*/
 @keyframes fluidRotate {

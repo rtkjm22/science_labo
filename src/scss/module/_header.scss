@@ -8,23 +8,37 @@
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  &_ttl > a {
+
+  &_ttl>a {
     font-size: 1.7rem;
     letter-spacing: .05em;
     font-weight: normal;
   }
+
   &_area {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     ul {
       font-weight: bold;
       letter-spacing: .1em;
       margin-right: 20px;
     }
-    li, dl, dt, dd {
+
+    li,
+    dl,
+    dt,
+    dd {
       display: inline-block;
     }
+
+    dd,
+    dd > a {
+      font-size: 1rem;
+      color: v.$black;
+    }
+
     &_tel::after {
       content: '/';
       padding: 0 10px;
@@ -42,9 +56,11 @@
   .bl_header {
     padding: 5px 30px;
     justify-content: center;
+
     ul {
       display: none;
     }
+
     .bl_btn {
       display: none;
     }
