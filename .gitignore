@@ -4,3 +4,4 @@ src/img/
 *.jqg
 *.jpeg
 *.png
+.vscode
